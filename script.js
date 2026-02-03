@@ -9,11 +9,11 @@ let username = localStorage.getItem("username");
 function showWelcome() {
   if(username) {
     nameForm.style.opacity = 0;
-    setTimeout(()=>{ nameForm.style.display = "none"; }, 300);
+    setTimeout(()=>{ nameForm.style.display = "none"; }, 500);
     welcome.textContent = "Привет, " + username + "!";
   } else {
     nameForm.style.display = "flex";
-    nameForm.style.opacity = 1;
+    setTimeout(()=>{ nameForm.style.opacity = 1; }, 50);
   }
 }
 
@@ -93,6 +93,7 @@ function renderLeaderboard() {
   });
 }
 
+/* Админка */
 const modal = document.createElement("div");
 modal.id="adminModal";
 modal.style.display="none";
